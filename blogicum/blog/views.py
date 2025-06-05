@@ -237,7 +237,8 @@ class CommentDeleteView(CommentBase, DeleteView):
         queryset = self.get_queryset()
         comment_id = self.kwargs.get('comment_id')
         post_id = self.kwargs.get('post_id')
-        obj = get_object_or_404(queryset, pk=comment_id, post__pk=post_id)
+        obj = get_object_or_404(queryset, pk=comment_id,
+                                post__pk=post_id)
         return obj
 
 

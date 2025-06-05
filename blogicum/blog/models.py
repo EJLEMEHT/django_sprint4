@@ -117,7 +117,8 @@ class Comment(models.Model):
         verbose_name='Автор комментария'
     )
     text = models.TextField('Текст комментария')
-    created_at = models.DateTimeField('Добавлено', auto_now_add=True)
+    created_at = models.DateTimeField('Добавлено',
+                                      auto_now_add=True)
 
     class Meta:
         ordering = ('created_at',)
